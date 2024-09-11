@@ -43,6 +43,8 @@ An E-Commerce Web for... well... to buy and sell stuff 😁
 
 **Bagan**
 
+![bagan django](https://github.com/RaAhYaMa/pbp-my-e-commerce/blob/master/src/common/images/Bagan%20Django.png)
+
 **Fungsi Git? 🛠️**
 
 Git adalah sistem kontrol versi yang memungkinkan pengembang melacak perubahan kode, bekerja secara kolaboratif, dan mengelola berbagai versi perangkat lunak. Dengan fitur branching dan merging, Git memfasilitasi pengembangan fitur baru tanpa mempengaruhi kode utama dan membantu menyelesaikan konflik perubahan. Sistem ini terdistribusi, memberikan setiap pengembang salinan lengkap dari proyek, sehingga meningkatkan keandalan dan keamanan data. Git juga mendukung integrasi dengan alat otomatisasi untuk build, pengujian, dan deployment, mempermudah proses pengembangan perangkat lunak modern.
