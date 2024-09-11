@@ -1,6 +1,9 @@
 # PBP - Welcome to T-Pos- I mean T-Shop
 An E-Commerce Web for... well... to buy and sell stuff 😁
 
+#### Deployment 🌐
+[http://raden-ahmad33-mytshop.pbp.cs.ui.ac.id/](http://raden-ahmad33-mytshop.pbp.cs.ui.ac.id/)
+
 ## Tugas 2 - PBP 2024/2025 Gasal
 **Implementasi?**
 1. **Punya koneksi internet, laptop dengan IDE, dan motivasi untuk melakukan**
