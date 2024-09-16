@@ -3,9 +3,42 @@
     <title>T-Shop</title>
 </head>
 <body>
+    {% extends "base.html" %}
+    {% block content %}
+
     <h1>Welcome to {{ title }}</h1>
+
     <h3>Name:</h3>
     <p>{{ name }}</p>
+
     <h3>Class:</h3>
     <p>{{ class }}</p>
+
+    {% if not product_entries %}
+    <p>Belum ada data Product</p>
+    {% else %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+
+        {% for p in product_entries %}
+        <tr>
+            <td>{{ p.name }}</td>
+            <td>{{ p.price }}</td>
+            <td>{{ p.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    <br />
+
+    <a href="{% url 'main:create_product' %}">
+        <button>Add New Product</button>
+    </a>
+    
+    {% endblock content %}
 </body>
