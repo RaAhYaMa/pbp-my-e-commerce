@@ -20,7 +20,11 @@ JSON lebih populer dibandingkan XML karena kesederhanaannya yang membuatnya lebi
 Metode is_valid() pada form Django adalah sebuah fungsi yang sangat krusial dalam memastikan kualitas dan keamanan data yang diinputkan pengguna. Ketika sebuah form dikirimkan, metode ini akan memeriksa apakah semua data yang dimasukkan memenuhi persyaratan validasi yang telah ditentukan, seperti jenis data, panjang karakter, dan format. Jika semua data valid, is_valid() akan mengembalikan nilai True dan memungkinkan kita untuk memproses data tersebut lebih lanjut. Sebaliknya, jika ada data yang tidak valid, metode ini akan mengembalikan nilai False.
 
 **Postman**
+- xml
 ![xml](https://github.com/RaAhYaMa/pbp-my-e-commerce/blob/master/src/common/images/xml.png)
+- xml by id
 ![xml_by_id](https://github.com/RaAhYaMa/pbp-my-e-commerce/blob/master/src/common/images/xml_by_id.png)
+- json
 ![json](https://github.com/RaAhYaMa/pbp-my-e-commerce/blob/master/src/common/images/json.png)
+- json by id
 ![json_by_id](https://github.com/RaAhYaMa/pbp-my-e-commerce/blob/master/src/common/images/json_by_id.png)
