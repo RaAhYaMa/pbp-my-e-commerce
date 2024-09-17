@@ -14,3 +14,13 @@ Data delivery penting dalam pengimplementasian sebuah platform karena memastikan
 Bagi saya lebih suka JSON karena strukturnya lebih mirip seperti dictionary dan secara space lebih sedikit ketimbang XML.
 
 JSON lebih populer dibandingkan XML karena kesederhanaannya yang membuatnya lebih mudah dibaca dan ditulis, serta efisiensinya dalam hal ukuran file dan kecepatan pemrosesan. JSON juga sangat kompatibel dengan JavaScript, yang merupakan bahasa utama untuk pengembangan web modern, sehingga memudahkan integrasi dan pengelolaan data dalam aplikasi web. Meskipun XML menawarkan struktur yang lebih kompleks dan dukungan untuk validasi yang lebih mendalam, JSON sering kali lebih disukai karena kemudahan penggunaannya dan dukungan luas dalam ekosistem teknologi saat ini.
+
+**Jelaskan fungsi dari method is_valid() pada form Django dan mengapa kita membutuhkan method tersebut?**
+
+Metode is_valid() pada form Django adalah sebuah fungsi yang sangat krusial dalam memastikan kualitas dan keamanan data yang diinputkan pengguna. Ketika sebuah form dikirimkan, metode ini akan memeriksa apakah semua data yang dimasukkan memenuhi persyaratan validasi yang telah ditentukan, seperti jenis data, panjang karakter, dan format. Jika semua data valid, is_valid() akan mengembalikan nilai True dan memungkinkan kita untuk memproses data tersebut lebih lanjut. Sebaliknya, jika ada data yang tidak valid, metode ini akan mengembalikan nilai False.
+
+**Postman**
+![xml](https://github.com/RaAhYaMa/pbp-my-e-commerce/blob/master/src/common/images/xml.png)
+![xml_by_id](https://github.com/RaAhYaMa/pbp-my-e-commerce/blob/master/src/common/images/xml_by_id.png)
+![json](https://github.com/RaAhYaMa/pbp-my-e-commerce/blob/master/src/common/images/json.png)
+![json_by_id](https://github.com/RaAhYaMa/pbp-my-e-commerce/blob/master/src/common/images/json_by_id.png)
