@@ -8,17 +8,25 @@ An E-Commerce Web for... well... to buy and sell stuff 😁
 
 **Apa perbedaan antara `HttpResponseRedirect()` dan `redirect()`**
 
+Dalam Django, `HttpResponseRedirect()` dan `redirect()` digunakan untuk mengalihkan pengguna ke halaman lain. `HttpResponseRedirect()` adalah kelas yang memberikan kontrol penuh atas respons HTTP redirect, memungkinkan kustomisasi yang lebih mendalam. Sementara itu, `redirect()` adalah fungsi shortcut yang lebih sederhana dan sering digunakan untuk redirect dasar. `HttpResponseRedirect()` lebih fleksibel namun memerlukan pemahaman yang lebih baik tentang HTTP, sedangkan `redirect()` lebih mudah digunakan dan cocok untuk sebagian besar kasus.
+
 ---
 
 **Jelaskan cara kerja penghubungan model `Product` dengan `User`!**
+
+Di Django, hubungan antara model memungkinkan kita untuk menghubungkan data yang berbeda. Model `Product` dapat dihubungkan dengan model `User` menggunakan `ForeignKey` untuk menunjukkan bahwa setiap produk memiliki seorang pemilik.
 
 ---
 
 **Apa perbedaan antara authentication dan authorization, apakah yang dilakukan saat pengguna login? Jelaskan bagaimana Django mengimplementasikan kedua konsep tersebut.**
 
+Authentication adalah proses memverifikasi identitas pengguna, biasanya melalui username dan password, sedangkan authorization menentukan izin pengguna setelah mereka terautentikasi. Dalam proses login, autentikasi dilakukan terlebih dahulu untuk memastikan identitas pengguna, diikuti oleh otorisasi untuk mengatur akses mereka ke sumber daya tertentu. Django mengimplementasikan autentikasi dengan sistem built-in yang memungkinkan pengguna untuk login dan logout melalui model `User`, menggunakan fungsi `authenticate()` dan `login()`, sementara otorisasi dikelola melalui permission dan groups, serta decorators seperti `@login_required` untuk membatasi akses ke view tertentu.
+
 ---
 
 **Bagaimana Django mengingat pengguna yang telah login? Jelaskan kegunaan lain dari cookies dan apakah semua cookies aman digunakan?**
+
+Django mengingat pengguna yang telah login melalui sesi dan cookies, yang menyimpan informasi seperti ID pengguna di browser. Selain untuk autentikasi, cookies juga digunakan untuk menyimpan preferensi pengguna, keranjang belanja, dan lain lain. Namun, tidak semua cookies aman, risiko seperti pencurian cookie, XSS, dan CSRF dapat terjadi jika tidak dilindungi dengan baik.
 
 ---
 
