@@ -1,64 +1,54 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <title>T-Shop</title>
 </head>
 <body>
     {% extends "base.html" %}
+    {% load static %}
     {% block content %}
-
-    <h1>Welcome to {{ title }}</h1>
-
-    <h3>Name:</h3>
-    <p>{{ name }}</p>
-
-    <h3>Class:</h3>
-    <p>{{ class }}</p>
-
-    {% if not product_entries %}
-    <p>Belum ada data Product</p>
-    {% else %}
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Description</th>
-        </tr>
-
-        {% for p in product_entries %}
-        <tr>
-            <td>{{ p.name }}</td>
-            <td>{{ p.price }}</td>
-            <td>{{ p.description }}</td>
-            <td>
-                <a href="{% url 'main:edit_product' p.pk %}">
-                    <button>
-                        Edit
-                    </button>
-                </a>
-            </td>
-            <td>
-                <a href="{% url 'main:delete_product' p.pk %}">
-                    <button>
-                        Delete
-                    </button>
-                </a>
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
-    {% endif %}
-
-    <br />
-
-    <a href="{% url 'main:create_product' %}">
-        <button>Add New Product</button>
-    </a>
-
-    <a href="{% url 'main:logout' %}">
-        <button>Logout</button>
-    </a>
-
-    <h5>Terakhir login : {{ last_login }}</h5>
     
+    {% include "navbar.html" with username=request.user.username %}
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Welcome to {{ title }}</h1>
+        </div>
+        
+        <div class="mb-6">
+            {% include "card_info.html" with name=name class=class %}
+            <div class="bg-blue-100 text-blue-800 p-4 rounded-lg shadow-md mt-4">
+                <h5 class="font-semibold">Terakhir login:</h5>
+                <p>{{ last_login }}</p>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Products</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {% if not product_entries %}
+                <div class="col-span-1 md:col-span-2 lg:col-span-3 text-center p-6 rounded-lg border border-gray-300">
+                    <div class="flex justify-center">
+                        <img src="{% static 'image/sedih-banget.png' %}" alt="Sad face" class="w-32 h-32 mb-4">
+                    </div>
+                    <p class="text-lg">Belum ada product yang terdaftar</p>
+                </div>
+            {% else %}
+                {% for p in product_entries %}
+                    {% include "card_product.html" with p=p %}
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="flex justify-center mt-6">
+            <a href="{% url 'main:create_product' %}">
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out">
+                    Add New Product
+                </button>
+            </a>
+        </div>
+    </div>
+
     {% endblock content %}
 </body>
+</html>
